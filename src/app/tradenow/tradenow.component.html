@@ -1,0 +1,33 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Trade Now</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr >
+            <th>Company Id</th>
+            <th>Price</th>
+            <th>Open</th>
+            <th>Close</th>
+            <th>High</th>
+            <th>Low</th>
+            <th>Update</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let company of companies">
+            <td>{{company.name}}</td>
+            <td>{{company.price}}</td>
+            <td>{{company.open}}</td>
+            <td>{{company.close}}</td>
+            <td>{{company.high}}</td>
+            <td>{{company.low}}</td>
+            <td><a href="/updatecompany/{{company.id}}">UPDATE</a>              
+            </td>  
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

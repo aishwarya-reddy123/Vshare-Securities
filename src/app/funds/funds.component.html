@@ -1,0 +1,47 @@
+<div class="card-container" style="margin-top: 20px; padding-top: 70px;">
+
+  <div class="row align-items-center ">
+    <div class="card  col-sm-6 align-items-center " style="width: 18rem; height:7rem">
+      <div class="card-body">
+        <h5 class="card-title">Available amount</h5>
+        <p>{{available_funds}}</p>
+      </div>
+
+    </div>
+   <div class="card  col-sm-6 bg-light" style= "width: 18rem;height:7rem">
+    <button class="gtn success bg-light "   style="width: 11rem; height:3rem" (click)="showAddModal()" >Deposit Funds</button>
+    <button class="gtn danger  bg-light" style="width: 11rem; height:3rem" (click)="showAddModal()">Withdraw Funds</button>
+  </div>
+</div>
+
+
+  <div class="text-center">
+    <button class="btn btn-success "  (click)="showAddModal()">Add Funds</button>
+  </div>
+</div>
+<div class="modal" tabindex="-1" role="dialog" id="addModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="addFundsForm" (ngSubmit)="initPayment()">
+          <div class="form-group">
+            <label for="amount" class="col-form-label">
+              Enter Amount to Add:
+            </label>
+            <input class="form-control" [formControlName]="'amount'" placeholder="Enter Amount to Add">
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-success">Add</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

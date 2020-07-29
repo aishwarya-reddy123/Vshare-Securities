@@ -1,0 +1,31 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Companies List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr >
+            <th>ID</th>
+            <th>Company Name</th>
+            <th>Index</th>
+            <th>Market Capital</th>
+            <th>Update</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let company of companies | async">
+            <td>{{company.id}}</td>
+            <td>{{company.name}}</td>
+            <td>{{company.index}}</td>
+            <td>{{company.marketcapital}}</td>
+            
+            <td><a href="/updatecompany/{{company.id}}">UPDATE</a>
+               
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

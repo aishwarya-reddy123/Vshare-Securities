@@ -1,0 +1,29 @@
+<body>
+  <div class="cart-item">
+    <h1 style="font-size:25px;color:gray; font-family:Comic Sans MS;"> </h1>
+    <table class="table table-striped">
+      <thead>
+        <tr style="font-size:25px;color:whitesmoke; font-family:Lucida Console ;background-color:blueviolet">
+          <th>Company Name</th>
+          <th>Price</th>
+          <th>Open</th>
+          <th>Close</th>
+          <th>PreviousClose</th>
+          <th>High</th>
+          <th>Low</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of items">
+          <td>{{ item.name }}</td>
+          <td>{{ item.price }}</td>
+          <td>{{ item.open }}</td>
+          <td>{{ item.close }}</td>
+          <td>{{ item.previousclose }}</td>
+          <td>{{ item.high}}</td>
+          <td>{{ item.low}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>

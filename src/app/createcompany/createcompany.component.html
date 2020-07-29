@@ -1,0 +1,46 @@
+<h3>Create Company</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    
+
+    <div class="form-group">
+      <label for="name">Company Name</label>
+      <input type="text" class="form-control" id="Name" required [(ngModel)]="company.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Index</label>
+      <input type="text" class="form-control" id="index" required [(ngModel)]="company.index" name="Index">
+    </div>
+    <div class="form-group">
+        <label for="name">Market  Capital</label>
+        <input type="text" class="form-control" id="marketcapital" required [(ngModel)]="company.marketcapital" name="marketcapital">
+      </div>
+      <div class="form-group">
+        <label for="name">Price</label>
+        <input type="text" class="form-control" id="price" required [(ngModel)]="company.price" name="price">
+      </div>
+      <div class="form-group">
+        <label for="name">Open</label>
+        <input type="text" class="form-control" id="open" required [(ngModel)]="company.open" name="open">
+      </div>
+      <div class="form-group">
+        <label for="name">Close</label>
+        <input type="text" class="form-control" id="Close" required [(ngModel)]="company.close" name="close">
+      </div>
+      <div class="form-group">
+        <label for="name">High</label>
+        <input type="text" class="form-control" id="high" required [(ngModel)]="company.high" name="high">
+      </div>
+      <div class="form-group">
+        <label for="name">Low</label>
+        <input type="text" class="form-control" id="Low" required [(ngModel)]="company.low" name="low">
+      </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
